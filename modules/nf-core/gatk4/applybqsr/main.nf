@@ -39,7 +39,6 @@ process GATK4_APPLYBQSR {
         --output ${prefix}.${input.getExtension()} \\
         --reference $fasta \\
         --bqsr-recal-file $bqsr_table \\
-        $interval_command \\
         --tmp-dir . \\
         $args
 
@@ -49,3 +48,4 @@ process GATK4_APPLYBQSR {
     END_VERSIONS
     """
 }
+// $interval_command \\
